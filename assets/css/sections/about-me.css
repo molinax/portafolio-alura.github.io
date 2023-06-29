@@ -1,0 +1,132 @@
+.about-me {
+    gap: 2.5rem;
+
+    font-size: 16px;
+}
+
+.about-me figure {
+    margin-inline: auto;
+    border-radius: 50%;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.about-me__user-img {
+    width: 200px;
+}
+
+.about-me__description-container {
+    gap: 1.5rem;
+
+    width: 100%;
+    max-width: 450px;
+    margin-inline: auto;
+}
+
+.about-me__title {
+    font-size: 1.9em;
+    color: var(--font-color-title);
+    line-height: 1.4em;
+    font-weight: 600;
+}
+
+.about-me__title span {
+    background: linear-gradient(90deg, var(--font-color-alternative), var(--bg-color-alternative), var(--font-color-alternative), var(--bg-color-alternative));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.about-me__paragraph {
+    font-size: 1em;
+    line-height: 1.4em;
+}
+
+.about-me__contact-me {
+    color: var(--font-color-alternative);
+    padding: 0.8em 1.7em;
+    width: 200px;
+    margin-top: 1rem;
+    text-align: center;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 1.1em;
+    border: 1px solid var(--bg-color-alternative);
+    font-family: inherit;
+    z-index: 1;
+   }
+   
+   .about-me__contact-me::before, .about-me__contact-me::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--bg-color-alternative);
+    transition: 1s ease;
+   }
+   
+   .about-me__contact-me::before {
+    top: -1em;
+    left: -1em;
+   }
+   
+   .about-me__contact-me::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+   }
+   
+   .about-me__contact-me:hover::before, .about-me__contact-me:hover::after {
+    height: 410px;
+    width: 410px;
+   }
+   
+   .about-me__contact-me:hover {
+    color: var(--font-color-alternative);
+    border-color: var(--bg-color-alternative);
+   }
+   
+   .about-me__contact-me:active {
+    filter: brightness(.8);
+   }
+   
+
+@media screen and (min-width: 768px) { 
+    .about-me {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 8rem;
+        
+        font-size: 17px;
+    }
+    
+    .about-me figure,
+    .about-me__description-container {
+        margin: 0;
+    }
+
+    .about-me__user-img {
+        width: 250px;
+    }
+
+    .about-me__description-container {
+        order: -1;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .about-me {
+        font-size: 20px;
+    }
+
+    .about-me__user-img {
+        width: 300px;
+    }
+}

@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap);
+
+:root {
+    /*  Colors  */
+    --bg-color: #212529;
+    --bg-color-section: #272c30;
+    --bg-color-alternative: #025858;
+    --bg-color-alternative-purple: #411b6c;
+    --font-color-title: #8d939a;
+    --font-color-paragraph: #62676b;
+    --font-color-alternative: #029393;
+    --font-color-alternative-purple: #553e6d;
+
+    /*  Font family  */
+    --ff-inter: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--font-color-paragraph);
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--font-color-paragraph);
+    font-family: var(--ff-inter);
+}
+
+main {
+    gap: 10rem;
+    margin-bottom: 2.3rem;
+}
+
+.wrapper {
+    width: 92%;
+    max-width: 1300px;
+    margin-inline: auto;
+    padding: 1.5rem 0;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+
+    font-size: 4em;
+    padding: 1rem;
+    opacity: .4;
+    cursor: pointer;
+    display: none;
+    transition: .5s;
+}
+
+.back-to-top:hover {
+    opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        gap: 10rem;
+    }
+
+    .back-to-top {
+        right: 30px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    main {
+        gap: 14rem;
+    }
+
+    .back-to-top {
+        right: 100px;
+    }
+}

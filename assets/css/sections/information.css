@@ -1,0 +1,96 @@
+.information {
+    gap: 2.3rem;
+
+    font-size: 16px;
+    margin-bottom: 4rem;
+    max-width: 900px;
+    padding: 2rem 0;
+}
+
+.information__title {
+    font-size: 2.5em;
+    font-weight: 600;
+    background: linear-gradient(90deg, var(--font-color-alternative-purple), var(--bg-color-alternative-purple), var(--font-color-alternative-purple), var(--bg-color-alternative-purple));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.information__paragraph {
+    font-size: 1.06em;
+    line-height: 1.5em;
+    text-transform: justify;
+    width: 100%;
+    max-width: 450px;
+}
+
+.information__subtitle {
+    font-size: 1.1em;
+    color: var(--font-color-title);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.information__subtitle--skills {
+    margin-top: 2.5rem;
+}
+
+.information__description-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.information__icon {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+
+    color: var(--font-color-alternative-purple);
+    border: 1px solid var(--bg-color-alternative-purple);
+    padding: .7rem;
+    border-radius: 3rem;
+    transition: background-color .2s ease-in-out;
+    cursor: default;
+}
+
+.information__icon:hover {
+    background-color: var(--bg-color-alternative-purple);
+}
+
+@media screen and (min-width: 768px) { 
+    .information {
+        gap: 3rem;
+        
+        font-size: 17px;
+        text-align: center;
+        border-radius: 1rem;
+        border: 1px solid var(--bg-color-section);
+        padding: 8rem 0;
+        transition: all .5s;
+    }
+
+    .information:hover {
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+        border-color: var(--bg-color);
+    }
+
+    .information__paragraph {
+        max-width: 600px;
+        margin-inline: auto;
+    }
+
+    .information__subtitle {
+        margin-bottom: 2rem;
+        align-self: center;
+    }
+
+    .information__description-container {
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .information {
+        font-size: 19px;
+    }
+}

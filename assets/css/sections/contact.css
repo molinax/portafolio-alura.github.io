@@ -1,0 +1,170 @@
+.contact {
+    gap: 2.5rem;
+
+    font-size: 16px;
+}
+
+.contact__title {
+    font-size: 2.5em;
+    font-weight: 600;
+    background: linear-gradient(90deg, var(--font-color-alternative-purple), var(--bg-color-alternative-purple), var(--font-color-alternative-purple), var(--bg-color-alternative-purple));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.contact__paragraph {
+    font-size: 1em;
+    line-height: 1.4em;
+    width: 95%;
+    max-width: 400px;
+}
+
+.contact__paragraph span {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: .7rem;
+}
+
+.contact__form {
+    gap: 3rem;
+}
+
+.contact__form-input-container {
+    position: relative;
+    width: 200px;
+  }
+  
+  .contact__form-input-container input[type="text"],
+  .contact__form-text-area {
+    font-size: .9em;
+    font-family: var(--ff-inter);
+    width: 100%;
+    color: var(--font-color-paragraph);
+    border: none;
+    border-bottom: 2px solid var(--font-color-paragraph);
+    padding: 8px 0;
+    background-color: transparent;
+    outline: none;
+  }
+  
+  .contact__form-input-container .contact__form-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--font-color-paragraph);
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .contact__form-input-container input[type="text"]:focus ~ .contact__form-label,
+  .contact__form-input-text-area:focus ~ .contact__form-label,
+  .contact__form-input-container input[type="text"]:valid ~ .contact__form-label,
+  .contact__form-input-text-area:focus ~ .contact__form-label {
+    top: -23px;
+    font-size: 1em;
+    color: var(--font-color-alternative-purple);
+  }
+  
+  .contact__form-input-container .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--font-color-alternative-purple);
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+  }
+  
+  .contact__form-input-container input[type="text"]:focus ~ .underline,
+  .contact__form-input-text-area:focus ~ .underline,
+  .contact__form-input-container input[type="text"]:valid ~ .underline,
+  .contact__form-input-text-area:valid ~ .underline {
+    transform: scaleX(1);
+  }
+
+.contact__form-text-area {
+    font-size: .9em;
+    color: var(--font-color-paragraph);
+    width: 300px;
+    height: 100px;
+    resize: none;
+    outline: none;
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid var(--font-color-paragraph);
+    border-radius: .3em;
+    margin-top: 1rem;
+    transition: .5s;
+}
+
+.contact__form-text-area:focus,
+.contact__form-text-area:valid {
+    border-color: var(--font-color-alternative-purple);
+}
+
+.contact__form-text-area:focus + .contact__form-label-text-area,
+.contact__form-text-area:valid + .contact__form-label-text-area {
+    transition: .5s;
+    order: -1;
+    color: var(--font-color-alternative-purple);
+}
+
+.contact__form-label-text-area {
+    order: -1;
+}
+
+.about-me__contact-me--form {
+    width: 220px;
+    font-size: .93em;
+    margin-top: 2rem;
+    color: var(--font-color-paragraph);
+    border-color: var(--bg-color-alternative-purple);
+    background-color: var(--bg-color-alternative-purple);
+}
+
+.about-me__contact-me--form:hover {
+    opacity: .8;
+    color: var(--font-color-paragraph);
+    border-color: var(--bg-color-alternative-purple);
+}
+
+
+@media screen and (min-width: 768px) {
+    .contact {
+        align-items: center;
+
+        font-size: 17px;
+        text-align: center;
+        border-radius: 1rem;
+        border: 1px solid var(--bg-color-section);
+        padding: 4rem 0;
+        transition: all .5s;
+    }
+
+    .contact:hover {
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+        border-color: var(--bg-color);
+    }
+
+    .contact__paragraph {
+        max-width: 400px;
+    }
+
+    .contact__form {
+        align-items: center;
+    }
+
+    .contact__form-text-area {
+        margin-left: -3.5em;
+        width: 350px;
+        height: 200px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .contact {
+        font-size: 18px;
+    }
+}

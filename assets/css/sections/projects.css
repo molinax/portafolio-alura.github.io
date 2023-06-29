@@ -1,0 +1,108 @@
+.projects {
+    font-size: 16px;
+    background-color: var(--bg-color-section);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    padding: 3rem 0;
+}
+
+.projects__title {
+    font-size: 2.4em;
+    background: linear-gradient(90deg, var(--font-color-alternative), var(--bg-color-alternative), var(--font-color-alternative), var(--bg-color-alternative));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    line-height: 1.4em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.projects__container-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+
+    border-radius: 1px solid teal;
+}
+
+.projects__card {
+    width: 100%;
+    max-width: 400px;
+    max-height: 350px;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    border-radius: 1rem;
+}
+
+.projects__card-img {
+    height: 68%;
+    object-fit: cover;
+}
+
+.projects__card-information {
+    padding: 1.5rem;
+}
+
+.projects__card-subtitle {
+    font-size: 1em;
+    margin-bottom: .5em;
+}
+
+.projects__icon-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .8rem;
+}
+
+.projects__icon {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+
+    font-size: .8em;
+    color: var(--font-color-alternative);
+    border: 1px solid var(--bg-color-alternative);
+    padding: .4rem;
+    transition: background-color .2s ease-in-out;
+    cursor: default;
+}
+
+.projects__icon:hover {
+    background-color: var(--bg-color-alternative);
+}
+
+.projects__links-container {
+    display: flex;
+    gap: 2rem;
+
+    font-size: 1em;
+    margin-top: 1.5em;
+}
+
+.projects__link:hover {
+    transition: all .1s ease-in-out;
+    color: var(--font-color-alternative);
+}
+
+.projects__link {
+    display: inline-flex;
+    align-items: center;
+    gap: .1rem;
+}
+
+@media screen and (min-width: 768px) { 
+    .projects {
+        font-size: 17px;
+    }
+
+    .projects__card {
+        max-width: 460px;
+        max-height: 460px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .projects {
+        font-size: 19px;
+    }
+}
